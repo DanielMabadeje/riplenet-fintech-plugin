@@ -119,6 +119,8 @@ class Rimplenet_Fintech_Admin_Dashboard
 		 */
 		require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-reverse-transaction.php';
 
+		new ReverseTransaction();
+
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
