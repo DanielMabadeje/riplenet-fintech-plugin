@@ -64,6 +64,12 @@ class ReverseTransaction
     private function checkIfAlreadyReversed($post_id)
     {
         $data = get_metadata('post', $post_id, "already_reversed", "true");
+
+        if (empty($data) || $data == "" || $data == null || $data == false) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private function addAlreadyReversedMeta($post_id)
