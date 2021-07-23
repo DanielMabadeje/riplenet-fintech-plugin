@@ -25,7 +25,7 @@ class ReverseTransaction
     public function reverseTransactions($data)
     {
 
-        if ($this->checkIfAlreadyReversed()) {
+        if ($this->checkIfAlreadyReversed($data['post_id'])) {
             // return false;
             $data = [
                 'status' => false,
@@ -61,9 +61,9 @@ class ReverseTransaction
         return $output;
     }
 
-    private function checkIfAlreadyReversed()
+    private function checkIfAlreadyReversed($post_id)
     {
-        # code...
+        $data = get_metadata('post', $post_id, "already_reversed", "true");
     }
 
     private function addAlreadyReversedMeta($post_id)
