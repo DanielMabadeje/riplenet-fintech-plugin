@@ -71,20 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['revert']) && wp_verify
     <?php
         return;
     }
-} else {
-    ?>
-    <center>
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong> ERROR: </strong> Error . Please Retry or contact admin
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    </center>
-    <?php
-    return;
-}
-
+} 
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['search']) && wp_verify_nonce($_POST['rimplenet-reverse-transaction-form'], 'rimplenet-reverse-transaction-form')) {

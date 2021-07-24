@@ -147,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && wp_verify_nonce($_POST['rimplenet-re
 
                                         $author_id = get_post_field('post_author', $txn_id);
 
-                                        $all_rimplenet_wallets = getWallets();
+                                        $all_rimplenet_wallets = $this->getWallets();
 
 
                                         $wallet_symbol = $all_rimplenet_wallets[$wallet_id]['symbol'];
